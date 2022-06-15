@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Nav pills -->
+        <div class="col-md-2">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#bai1"
+                >Bài 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai2">Bài 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai3">Bài 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai4">Bài 4</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="col-md-10 py-3">
+          <div class="tab-content">
+            <div class="tab-pane container active" id="bai1">
+              <h1>Xuất 3 số theo thứ tự tăng dần</h1>
+              <div class="note">
+                <p>
+                  Bài 1: <br />
+                  Đầu vào:<br />
+                  - 3 số nguyên<br />
+                  <br />
+                  Xử lý:<br />
+                  - Tạo biến a, b, c và gán lần lượt từng số nguyên <br />
+                  - Tạo biến kq <br />
+                  - So sánh từng giá trị a,b,c theo cách if..else lồng nhau
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ if(a < b) tiếp tục so sánh a,b với c
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. if(c < a) =>
+                  kq = c < a < b <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. else if(b <
+                  c) => kq = a < b < c <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. else kq = a
+                  < c < b <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ if (b < a) tiếp tục so sánh a,b với
+                  c <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. if(c < b) =>
+                  kq = c < b < a <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. else if(a <
+                  c) => kq = b < a < c <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. else kq = b
+                  < c < a <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ else kq = a < b < c <br />
+                  Đầu ra: <br />
+                  <br />
+                  + kq với 3 số được sắp xếp theo thứ tự tăng dần
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="so1"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thứ 1"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="so2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thứ 2"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="so3"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thứ 3 "
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" id="kq_Bai1">Kết quả</button>
+                <div class="alert alert-success mt-2" id="KQ1"></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai2">
+              <h1>Chương trình "Chào hỏi"</h1>
+              <div class="note">
+                <p>
+                  Bài 2: <br />
+                  Đầu vào: <br />
+                  - Thành viên: Bố, Mẹ, Anh trai, Em gái <br />
+                  <br />
+                  Xử lý: <br />
+                  - Tạo biến tv và gán Thành viên vào biến <br />
+                  - Tạo biến loiChao <br />
+                  - Kiểm tra tv là Thành viên nào : <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu B thì loiChao là Xin chào Bố
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu M thì loiChao là Xin chào Mẹ
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu A thì loiChao là Xin chào Anh
+                  trai <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu E thì loiChao là Xin chào Em gái
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu rỗng thì loiChao là Xin chào
+                  Người lạ ơi !! <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Lời chào ứng với Thành viên đã chọn
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4">
+                  <select class="form-control" name="" id="thanhVien">
+                    <option value="">Chọn thành viên</option>
+                    <option value="B">Bố</option>
+                    <option value="M">Mẹ</option>
+                    <option value="A">Anh trai</option>
+                    <option value="E">Em gái</option>
+                  </select>
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" id="kq_Bai2">
+                  Gửi lời chào
+                </button>
+                <div class="alert alert-success mt-2" id="KQ2"></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai3">
+              <h1>Đếm số chẳn lẽ</h1>
+              <div class="note">
+                <p>
+                  Đầu vào: <br />
+                  - 3 Số nguyên <br />
+                  <br />
+                  Xủ lý: <br />
+                  - Tạo biến a,b,c và gán lần lượt 3 số nguyên vào biến <br />
+                  - Tạo biến countC = 0 và countL = 0 <br />
+                  - Lấy từng số nguyên kiểm tra xem có chia hết cho 2 không (a %
+                  2 == 0), nếu chia hết cho 2 thì countC tăng lên 1<br />
+                  - CountL = 3 - CountC <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Số lượng số chẵn <br />
+                  - Số lượng số lẻ
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="soNguyen1"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập số nguyên thứ 1"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="soNguyen2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập số nguyên thứ 2"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="soNguyen3"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập số nguyên thứ 3"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" id="kq_Bai3">Kết quả</button>
+                <div class="alert alert-success mt-2" id="KQ3"></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai4">
+              <h1>Nhận biết tam giác</h1>
+              <div class="note">
+                <p>
+                  Đầu vào: <br />
+                  - 3 cạnh của tam giác <br />
+                  <br />
+                  Xử lý: <br />
+                  - Tạo biến a,b,c và gán từng cạnh của tam giác vào biến
+                  <br />
+                  - Tạo biến kq <br />
+                  - Kiểm tra 3 cạnh của tam giác: <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu a = b = c thì kq = Tam giác đều
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu a = b hoặc b = c hoặc a = c thì
+                  kq = Tam giác cân
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu a = sqrt(b*b + c*c) hoặc b =
+                  sqrt(a*a + c*c) hoặc c = sqrt(a*a + b*b) thì kq = Tam giác
+                  vuông <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ Nếu không thõa các điều kiện trên
+                  thì kq = Loại tam giác nào đó <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Xác định được loại tam giác
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="canh1"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập cạnh thứ 1"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="canh2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập cạnh thứ 2"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="canh3"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập cạnh thứ 3"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" id="kq_Bai4">Kết quả</button>
+                <div class="alert alert-success mt-2" id="KQ4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
